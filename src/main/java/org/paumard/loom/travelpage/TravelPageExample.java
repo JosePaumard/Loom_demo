@@ -12,7 +12,10 @@ import java.util.concurrent.Future;
 
 public class TravelPageExample {
 
-    public static final ChronoUnit CHRONO_UNIT = ChronoUnit.SECONDS;
+    // Changing the following to SECONDS will give you enough time to
+    // dump the threads in a JSON file, with this command:
+    // jcmd <the displayed pid value> Thread.dump_to_file  -format=json <your json file>
+    public static final ChronoUnit CHRONO_UNIT = ChronoUnit.MILLIS;
 
     private static class TravelPageScope extends StructuredTaskScope<PageComponent> {
 
